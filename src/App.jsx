@@ -88,9 +88,9 @@ const Preloader = ({ onComplete }) => {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
-                className="text-4xl md:text-6xl font-black tracking-tighter text-white"
+                className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter text-white px-4 break-words"
               >
-                Welcome <br className="md:hidden" /><span className="text-mint">@SarthakVaishampayan</span>
+                Welcome <br className="md:hidden" /><span className="text-mint block sm:inline break-all sm:break-normal">@SarthakVaishampayan</span>
               </motion.h1>
             </div>
             <motion.p
@@ -136,17 +136,12 @@ const Navbar = () => {
         </div>
 
         <button
-          className="lg:hidden text-white hover:text-mint transition w-8 h-8 relative z-[102]"
+          className="lg:hidden w-10 h-10 relative z-[102] flex flex-col items-end justify-center gap-[5px] group"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={32} /> : (
-            <img
-              decoding="async"
-              src="https://framerusercontent.com/images/lfmN9uz4fNR8wJaSyfqakktMYMA.svg"
-              alt="Menu"
-              style={{ display: 'block', width: '100%', height: '100%', objectPosition: 'center center', objectFit: 'cover' }}
-            />
-          )}
+          <span className={`h-[2px] bg-white transition-all duration-300 ease-[0.76,0,0.24,1] origin-center ${isOpen ? 'w-6 translate-y-[7px] rotate-45' : 'w-8 group-hover:w-6 group-hover:bg-mint'}`}></span>
+          <span className={`h-[2px] bg-white transition-all duration-300 ease-[0.76,0,0.24,1] ${isOpen ? 'opacity-0 w-6' : 'w-6 group-hover:w-8 group-hover:bg-mint'}`}></span>
+          <span className={`h-[2px] bg-white transition-all duration-300 ease-[0.76,0,0.24,1] origin-center ${isOpen ? 'w-6 -translate-y-[7px] -rotate-45' : 'w-4 group-hover:w-6 group-hover:bg-mint'}`}></span>
         </button>
       </nav>
 
@@ -191,21 +186,22 @@ const Hero = () => (
       </h1>
     </div>
 
-    {/* Floating Pill Tags Adjusted */}
-    <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[1%] lg:left-[5%] top-[10%] lg:top-[18%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1000">
+    {/* Desktop Floating Pill Tags */}
+    <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[5%] top-[27%] z-30 hidden lg:block" data-aos="fade-in" data-aos-delay="1000">
       <div className="bg-[#ff5f4a] text-white text-xs font-black tracking-widest uppercase px-6 py-3 rounded-full shadow-2xl relative">
         Frontend Engineer
         <div className="absolute -bottom-2 right-8 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-transparent border-t-[#ff5f4a]"></div>
       </div>
     </motion.div>
 
-    <motion.div animate={{ y: [0, 15, 0] }} transition={{ duration: 4.1, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute right-[5%] lg:right-[15%] top-[16%] lg:top-[27%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1200">
+    <motion.div animate={{ y: [0, 15, 0] }} transition={{ duration: 4.1, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} className="absolute right-[15%] top-[22%] z-30 hidden lg:block" data-aos="fade-in" data-aos-delay="1200">
       <div className="bg-[#0be5ba] text-[#1a1c26] text-xs font-black tracking-widest uppercase px-6 py-3 rounded-full shadow-2xl relative">
         Backend Systems
+        <div className="absolute -left-2 top-3 w-0 h-0 border-t-[10px] border-b-[10px] border-r-[10px] border-transparent border-r-[#0be5ba]"></div>
       </div>
     </motion.div>
 
-    <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute right-[10%] lg:right-[17%] bottom-[33%] lg:bottom-[30%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1400">
+    <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute right-[17%] bottom-[30%] z-30 hidden lg:block" data-aos="fade-in" data-aos-delay="1400">
       <div className="bg-[#4a85ff] text-white text-xs font-black tracking-widest uppercase px-6 py-3 rounded-full shadow-2xl relative">
         UI / UX Design
         <div className="absolute -top-2 left-6 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-transparent border-b-[#4a85ff]"></div>
@@ -213,7 +209,7 @@ const Hero = () => (
     </motion.div>
 
     {/* Central Focus Portrait */}
-    <div className="relative z-20 w-[5vw] md:w-[60vw] max-w-[800px] h-[65vh] md:h-[75vh] mx-auto flex items-end justify-center pointer-events-none" data-aos="fade-up" data-aos-duration="1500">
+    <div className="relative z-20 w-[95vw] md:w-[60vw] max-w-[800px] h-[65vh] md:h-[75vh] mx-auto flex items-end justify-center pointer-events-none" data-aos="fade-up" data-aos-duration="1500">
       {/* Use a cutout PNG for maximum effect */}
       <img
         src="/profile.png"
@@ -519,7 +515,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">Email</p>
-                <a href="mailto:sarthakvaishampayan22@gmail.com" className="text-lg md:text-xl font-bold hover:text-mint transition text-white">sarthakvaishampayan22@gmail.com</a>
+                <a href="mailto:sarthakvaishampayan22@gmail.com" className="text-xs sm:text-sm md:text-xl font-bold hover:text-mint transition text-white break-all">sarthakvaishampayan22@gmail.com</a>
               </div>
             </div>
             <div className="flex items-center gap-6 group">
@@ -528,7 +524,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">Phone</p>
-                <a href="tel:+919425340813" className="text-lg md:text-xl font-bold hover:text-mint transition text-white">+91 94253 40813</a>
+                <a href="tel:+919425340813" className="text-xs sm:text-sm md:text-xl font-bold hover:text-mint transition text-white">+91 94253 40813</a>
               </div>
             </div>
           </div>
