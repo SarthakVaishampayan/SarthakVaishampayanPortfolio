@@ -129,7 +129,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex">
           <Magnetic>
-            <a href="/Resume.pdf.pdf" download className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-full text-[10px] tracking-widest uppercase hover:bg-mint hover:scale-105 transition-all font-black shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            <a href="/Resume.pdf" download="Sarthak_Vaishampayan_Resume.pdf" className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-full text-[10px] tracking-widest uppercase hover:bg-mint hover:scale-105 transition-all font-black shadow-[0_0_20px_rgba(255,255,255,0.2)]">
               <Download size={14} /> Download CV
             </a>
           </Magnetic>
@@ -161,7 +161,7 @@ const Navbar = () => {
 
           <div className="w-full h-px bg-gray-800 my-6"></div>
 
-          <a href="/Resume.pdf.pdf" download className="flex justify-center items-center gap-2 bg-white text-black px-6 py-4 rounded-full text-xs uppercase hover:bg-mint transition-colors font-black">
+          <a href="/Resume.pdf" download="Sarthak_Vaishampayan_Resume.pdf" className="flex justify-center items-center gap-2 bg-white text-black px-6 py-4 rounded-full text-xs uppercase hover:bg-mint transition-colors font-black">
             <Download size={16} /> Download CV
           </a>
         </div>
