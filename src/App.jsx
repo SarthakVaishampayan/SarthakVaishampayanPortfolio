@@ -122,6 +122,7 @@ const Navbar = () => {
           <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-mint transition">Home</a>
           <a href="#services" className="hover:text-mint transition">Services</a>
           <a href="#projects" className="hover:text-mint transition">Project</a>
+          <a href="#skills" className="hover:text-mint transition">Skills</a>
           <a href="#insights" className="hover:text-mint transition">Insights</a>
           <a href="#contact" className="hover:text-mint transition">Contact</a>
         </div>
@@ -159,6 +160,7 @@ const Navbar = () => {
           <a href="#" onClick={(e) => { e.preventDefault(); setIsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-mint transition transform hover:translate-x-2">Home</a>
           <a href="#services" onClick={() => setIsOpen(false)} className="hover:text-mint transition transform hover:translate-x-2">Services</a>
           <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-mint transition transform hover:translate-x-2">Project</a>
+          <a href="#skills" onClick={() => setIsOpen(false)} className="hover:text-mint transition transform hover:translate-x-2">Skills</a>
           <a href="#insights" onClick={() => setIsOpen(false)} className="hover:text-mint transition transform hover:translate-x-2">Insights</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-mint transition transform hover:translate-x-2">Contact</a>
 
@@ -190,7 +192,7 @@ const Hero = () => (
     </div>
 
     {/* Floating Pill Tags Adjusted */}
-    <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[1%] lg:left-[4%] top-[10%] lg:top-[18%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1000">
+    <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[1%] lg:left-[5%] top-[10%] lg:top-[18%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1000">
       <div className="bg-[#ff5f4a] text-white text-xs font-black tracking-widest uppercase px-6 py-3 rounded-full shadow-2xl relative">
         Frontend Engineer
         <div className="absolute -bottom-2 right-8 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-transparent border-t-[#ff5f4a]"></div>
@@ -203,7 +205,7 @@ const Hero = () => (
       </div>
     </motion.div>
 
-    <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute right-[10%] lg:right-[20%] bottom-[33%] lg:bottom-[43%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1400">
+    <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute right-[10%] lg:right-[17%] bottom-[33%] lg:bottom-[30%] z-30 hidden md:block" data-aos="fade-in" data-aos-delay="1400">
       <div className="bg-[#4a85ff] text-white text-xs font-black tracking-widest uppercase px-6 py-3 rounded-full shadow-2xl relative">
         UI / UX Design
         <div className="absolute -top-2 left-6 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[10px] border-transparent border-b-[#4a85ff]"></div>
@@ -211,7 +213,7 @@ const Hero = () => (
     </motion.div>
 
     {/* Central Focus Portrait */}
-    <div className="relative z-20 w-[95vw] md:w-[60vw] max-w-[800px] h-[65vh] md:h-[75vh] mx-auto flex items-end justify-center pointer-events-none" data-aos="fade-up" data-aos-duration="1500">
+    <div className="relative z-20 w-[5vw] md:w-[60vw] max-w-[800px] h-[65vh] md:h-[75vh] mx-auto flex items-end justify-center pointer-events-none" data-aos="fade-up" data-aos-duration="1500">
       {/* Use a cutout PNG for maximum effect */}
       <img
         src="/profile.png"
@@ -386,7 +388,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-32 px-6 lg:px-24 bg-[#15171f] relative">
+    <section id="skills" className="py-32 px-6 lg:px-24 bg-[#15171f] relative">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
 
         <div className="lg:w-1/3" data-aos="fade-right">
@@ -503,7 +505,7 @@ const Contact = () => {
   };
 
   return (
-    <footer id="contact" className="py-32 px-6 lg:px-24 bg-[#1a1c26] border-t border-gray-800 relative z-10 overflow-hidden">
+    <footer id="contact" className="pt-32 pb-10 px-6 lg:px-24 bg-[#1a1c26] border-t border-gray-800 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20" data-aos="fade-up">
 
         <div className="relative z-10">
