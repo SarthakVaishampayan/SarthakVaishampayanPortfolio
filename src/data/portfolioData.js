@@ -11,7 +11,7 @@ export const projects = [
     desc: "A full-stack SaaS platform for managing pool/snooker parlours, cricket/football turfs, pickleball courts, and gaming zones. Features multi-tenant architecture, subscription management, and real-time session tracking.",
     tags: ["React 19", "Node.js", "MongoDB", "Tailwind CSS"],
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    link: "http://167.71.255.58"
+    link: "http://167.71.225.58"
   },
   {
     title: "BookYourGame – Console Booking",

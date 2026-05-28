@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import CursorGlow from './components/CursorGlow';
 import ScrollProgress from './components/ScrollProgress';
 import FloatingOrbs from './components/FloatingOrbs';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ScrollProgress />
       <CursorGlow />
       <FloatingOrbs />
+      <BackToTop />
       <Navbar />
 
       <div className="relative w-full overflow-hidden">
