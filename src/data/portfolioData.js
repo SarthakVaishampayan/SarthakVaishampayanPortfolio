@@ -6,6 +6,14 @@ export const services = [
 
 export const projects = [
   {
+    title: "VenuePro SaaS",
+    category: "Multi-Tenant Platform",
+    desc: "A full-stack SaaS platform for managing pool/snooker parlours, cricket/football turfs, pickleball courts, and gaming zones. Features multi-tenant architecture, subscription management, and real-time session tracking.",
+    tags: ["React 19", "Node.js", "MongoDB", "Tailwind CSS"],
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    link: "http://167.71.255.58"
+  },
+  {
     title: "BookYourGame – Console Booking",
     category: "Real-time Systems",
     desc: "Cloud-enabled platform for real-time console availability and slot-based bookings. Designed separate owner and user dashboards with live updates and automated flows.",
@@ -20,14 +28,6 @@ export const projects = [
     tags: ["React.js", "Socket.io", "Canvas", "CSS3"],
     img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop",
     link: "https://scribbl-pearl.vercel.app/"
-  },
-  {
-    title: "VenuePro SaaS",
-    category: "Multi-Tenant Platform",
-    desc: "A full-stack SaaS platform for managing pool/snooker parlours, cricket/football turfs, pickleball courts, and gaming zones. Features multi-tenant architecture, subscription management, and real-time session tracking.",
-    tags: ["React 19", "Node.js", "MongoDB", "Tailwind CSS"],
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    link: "https://venuepro-five.vercel.app"
   },
   {
     title: "DRDO Employee System",
