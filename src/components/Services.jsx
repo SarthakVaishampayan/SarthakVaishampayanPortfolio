@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { Code, PenTool, Database } from 'lucide-react';
 import { services } from '../data/portfolioData';
 import { useInView } from '../hooks/useInView';
+import { Parallax } from './Animations';
+import NoiseOverlay from './NoiseOverlay';
+import Marquee from './Marquee';
 
 const iconMap = { Code, PenTool, Database };
 
@@ -42,7 +45,9 @@ export default function Services() {
 
   return (
     <section id="services" className="py-32 px-6 lg:px-24 bg-[#1a1c26] border-t border-gray-800 relative overflow-hidden">
-      <div ref={ref} className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 relative z-10">
+      <NoiseOverlay opacity={0.02} />
+      <Marquee />
+      <div ref={ref} className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 relative z-10 mt-20">
         <div className="lg:w-1/3 flex flex-col justify-center">
           <motion.h2
             className="text-4xl md:text-5xl font-medium text-white leading-tight tracking-tight"
@@ -69,10 +74,14 @@ export default function Services() {
           />
         </div>
 
-        <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {services.map((srv, i) => (
-            <ServiceCard key={i} srv={srv} i={i} />
-          ))}
+        <div className="lg:w-2/3">
+          <Parallax speed={0.2}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {services.map((srv, i) => (
+                <ServiceCard key={i} srv={srv} i={i} />
+              ))}
+            </div>
+          </Parallax>
         </div>
       </div>
     </section>

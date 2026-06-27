@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { useCountUp } from '../hooks/useCountUp';
 import ScrollDownIndicator from './ScrollDownIndicator';
+import NoiseOverlay from './NoiseOverlay';
 
 const StatItem = ({ end, label, suffix = '+' }) => {
   const [ref, inView] = useInView({ threshold: 0.5 });
@@ -53,6 +54,7 @@ export default function Hero() {
     <section id="home" className="min-h-screen relative flex flex-col justify-end overflow-hidden pt-20 bg-[#15171f]">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(26,28,38,0)_0%,_#15171f_100%)] z-10 pointer-events-none" />
+      <NoiseOverlay opacity={0.015} />
 
       {/* Massive Typography */}
       <div className="absolute inset-x-0 top-[42%] -translate-y-1/2 flex flex-col items-center justify-center z-10 w-full text-center pointer-events-none">

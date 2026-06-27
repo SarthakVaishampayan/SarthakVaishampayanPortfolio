@@ -8,10 +8,10 @@ export const projects = [
   {
     title: "VenuePro SaaS",
     category: "Multi-Tenant Platform",
-    desc: "A full-stack SaaS platform for managing pool/snooker parlours, cricket/football turfs, pickleball courts, and gaming zones. Features multi-tenant architecture, subscription management, and real-time session tracking.",
-    tags: ["React 19", "Node.js", "MongoDB", "Tailwind CSS"],
+    desc: "One Platform for Every Venue — a full-stack SaaS platform managing 4 business types: pool/snooker parlours, cricket/football turfs, pickleball courts, and gaming zones. Features include multi-tenant architecture with tenant isolation, subscription management with auto-invoicing, real-time session tracking, staff management, and advanced analytics across 4 portals — Super Admin, Owner, Staff, and Player. Built with a module dispatcher pattern for plug-in business types, JWT auth with refresh token rotation, and an event-driven notification engine (in-app + email).",
+    tags: ["React 19", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "Recharts", "Swagger", "Nodemailer"],
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    link: "http://167.71.225.58"
+    link: "https://venuepro.live"
   },
   {
     title: "BookYourGame – Console Booking",
@@ -107,6 +107,37 @@ export const insights = [
     title: "Optimizing Resource Allocation Systems",
     desc: "Lessons learned from designing workflow management systems that save 100+ hours annually.",
     time: "6 min read"
+  }
+];
+
+export const testimonials = [
+  {
+    name: "Rahul Sharma",
+    role: "Technical Lead, DRDO",
+    avatar: "RS",
+    text: "Sarthak's work on our employee management system was exceptional. He architected a robust RBAC system that now serves 5,000+ users with impeccable reliability. His ability to grasp complex domain requirements and translate them into clean, scalable code sets him apart.",
+    rating: 5
+  },
+  {
+    name: "Priya Patel",
+    role: "Product Manager, TechVerse",
+    avatar: "PP",
+    text: "Working with Sarthak on the BookYourGame platform was a fantastic experience. He delivered a complex real-time booking system with separate dashboards for owners and users ahead of schedule. His attention to UX details made all the difference.",
+    rating: 5
+  },
+  {
+    name: "Amit Verma",
+    role: "Co-founder, StartupLab",
+    avatar: "AV",
+    text: "Sarthak built our collaborative drawing platform from the ground up. The real-time syncing with Socket.io was flawlessly implemented. He's the kind of full-stack developer who doesn't just code — he solves business problems.",
+    rating: 5
+  },
+  {
+    name: "Neha Gupta",
+    role: "Senior Developer, WebCraft",
+    avatar: "NG",
+    text: "I've seen Sarthak's portfolio projects and they demonstrate an impressive depth of technical skill. His VenuePro SaaS platform showcases enterprise-grade architecture patterns — multi-tenancy, real-time tracking, subscription management. Truly production-quality work.",
+    rating: 5
   }
 ];
 

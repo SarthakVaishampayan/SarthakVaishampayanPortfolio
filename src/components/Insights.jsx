@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { insights } from '../data/portfolioData';
+import NoiseOverlay from './NoiseOverlay';
+import { Reveal } from './Animations';
 
 export default function Insights() {
   return (
     <section id="insights" className="py-32 px-6 lg:px-24 bg-[#1a1c26] relative overflow-hidden">
+      <NoiseOverlay opacity={0.02} />
       {/* Background Typography */}
       <motion.div
         className="absolute left-[-5%] top-[10%] text-[15vw] font-black leading-[0.8] text-transparent select-none pointer-events-none hidden lg:block tracking-tighter"
@@ -26,9 +29,11 @@ export default function Insights() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-4 text-white uppercase tracking-tighter">
-            Latest <span className="text-mint">Insights</span>
-          </h2>
+          <Reveal>
+            <h2 className="text-5xl md:text-7xl font-black mb-4 text-white uppercase tracking-tighter">
+              Latest <span className="text-mint">Insights</span>
+            </h2>
+          </Reveal>
           <p className="text-gray-400 text-xl font-medium">Sharing knowledge and experiences from my journey.</p>
         </motion.div>
 

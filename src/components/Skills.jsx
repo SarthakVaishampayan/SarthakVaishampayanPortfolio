@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Terminal, FileCode2, Wrench, BrainCircuit } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 import { useInView } from '../hooks/useInView';
+import { Parallax } from './Animations';
+import NoiseOverlay from './NoiseOverlay';
 
 const iconMap = { Terminal, FileCode2, Wrench, BrainCircuit };
 
@@ -42,16 +44,10 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-32 px-6 lg:px-24 bg-[#15171f] relative overflow-hidden">
-      {/* Background grid pattern */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <div className="w-full h-full" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
+      <NoiseOverlay opacity={0.015} />
 
       <div ref={ref} className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center relative z-10">
-        <div className="lg:w-1/3">
+        <Parallax speed={0.15} className="lg:w-1/3">
           <motion.h2
             className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tighter uppercase"
             initial={{ opacity: 0, x: -40 }}
@@ -89,7 +85,7 @@ export default function Skills() {
               />
             ))}
           </motion.div>
-        </div>
+        </Parallax>
 
         <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {skillCategories.map((cat, i) => {

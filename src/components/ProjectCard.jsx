@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import BlurImage from './BlurImage';
 
 export default function ProjectCard({ proj, index }) {
   const ref = useRef(null);
@@ -87,13 +88,10 @@ export default function ProjectCard({ proj, index }) {
             style={{ y }}
             className="w-full lg:w-[45%] aspect-[4/3] rounded-3xl overflow-hidden shrink-0 opacity-90 group-hover:opacity-100 transition-all duration-700 shadow-2xl skew-x-1 group-hover:skew-x-0 group-hover:-translate-y-2 border-4 border-[#1a1c26]"
           >
-            <motion.img
+            <BlurImage
               src={proj.img}
               alt={proj.title}
-              className="w-full h-full object-cover"
-              loading="lazy"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.7 }}
+              className="w-full h-full"
             />
           </motion.div>
         </div>
